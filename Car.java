@@ -27,9 +27,41 @@
      */
 public class Car {
     // Variables:
+    private String vIN;
+    private String make = "Zoomster";
+    private String model;
+    private String licensePlateNumber;
+
+    static carNum;
+    static carNumS;
+    static carNumR;
+    static carNumC;
+
+    static double carPriceS = 102000.00;
+    static double carPriceR = 206000.00;
+    static double carPriceC = 74000.00;
 
     // Constructor:
-    
+    public Car(){
+        vIN = "";
+        make = "";
+        double m = Math.random * 3;
+        if(m < 1){
+            model = "Speedster";
+            carNumS++;
+        }
+        if(m >= 1 && m < 2){
+            model = "Roadster";
+            carNumR++;
+        }
+        if(m >= 2){
+            model = "Cudester";
+            carNumC++;
+        }
+        make = "Zoomster";
+        licensePlateNumber = "";
+        carNum++;
+    }
 
     // Methods:
     /**
@@ -39,19 +71,19 @@ public class Car {
      * @return VIN -the VIN of the Car object
      */
     public String getVIN(){
-
+        return vIN;
     }
     /**
      * [your Javadocs here]
      */
     public String getModel(){
-
+        return model;
     }
     /**
      * [your Javadocs here]
      */
     public String getMake(){
-
+        return make;
     }
     /**
      * Sets the String license plate number of a given Car object.
@@ -60,14 +92,14 @@ public class Car {
      * @param plateNumber -the customer's String license plate number
      */
     public void setPlateNumber(String plateNumber){
-
+        licensePlateNumber = plateNumber;
     }
     /**
      * Returns the total profits from cars produced by my factory.
      * @return totalProfits -the total sale price of all Car objects created
      */
     public double getTotalProfits(){
-
+        return carPriceS*carNumS + carPriceR*carNumR + carPriceC*carNumC;
     }
     /**
      * Returns the total number of cars produced by my factory.
