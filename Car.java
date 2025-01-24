@@ -34,10 +34,10 @@ public class Car {
     private String model;
     private String licensePlateNumber;
 
-    static carNum;
-    static carNumS;
-    static carNumR;
-    static carNumC;
+    static int carNum;
+    static int carNumS;
+    static int carNumR;
+    static int carNumC;
 
     static double carPriceS = 102000.00;
     static double carPriceR = 206000.00;
