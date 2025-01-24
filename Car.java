@@ -27,6 +27,8 @@
      */
 public class Car {
     // Variables:
+    private int asciip = 65;
+    private int quickj = 0;
     private String vIN;
     private String make = "Zoomster";
     private String model;
@@ -43,8 +45,11 @@ public class Car {
 
     // Constructor:
     public Car(){
-        vIN = "";
-        make = "";
+        quickj = carNum/90000;
+        if(1 == 1){
+            vIN = (char)asciip + (10000 + carNum - quickj*90000);
+        }
+
         double m = Math.random * 3;
         if(m < 1){
             model = "Speedster";
@@ -106,7 +111,7 @@ public class Car {
      * @return totalCars -the total number of Car objects created
      */
     public int getTotalCars(){
-
+        return carNum;
     }
     /**
      * Returns the  number of Speedster cars produced by my factory.
@@ -114,7 +119,7 @@ public class Car {
      * with model "Speedster" created
      */
     public int getTotalSpeedsters(){
-
+        return carNumS;
     }
     /**
      * Returns the  number of Roadster cars produced by my factory.
@@ -122,7 +127,7 @@ public class Car {
      * with model "Roadster" created
      */
     public int getTotalRoadsters(){
-
+        return carNumR;
     }
     /**
      * Returns the  number of Cubester cars produced by my factory.
@@ -130,7 +135,7 @@ public class Car {
      * with model "Cubester" created
      */
     public int getTotalCubesters(){
-
+        return carNumC;
     }
 
 }
